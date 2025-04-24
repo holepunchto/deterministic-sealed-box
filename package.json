@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx standard && brittle test.js"
+    "test": "standard && brittle test.js"
   },
+  "files": [],
   "keywords": [],
   "author": "Holepunch Inc.",
   "license": "Apache-2.0",
