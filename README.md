@@ -23,11 +23,11 @@ const message = seal.decrypt(message, recipientKeyPair)
 
 Generate a key pair, optionally pass a `seed`
 
-#### `const sealed = seal.encrypt(message, recipient, fixedKey)`
+#### `const sealed = seal.encrypt(message, recipient, privateFixedKey)`
 
-Create a sealed box. `recipient` should be the recipients public key. `fixedKey` is 32 bytes.
+Create a sealed box. `recipient` should be the recipients public key. `privateFixedKey` is 32 bytes.
 
-The output `sealed` is deterministic over `message`, `recipient` and `fixedKey`.
+The output `sealed` is deterministic over `message`, `recipient` and `privateFixedKey`.
 
 #### `const message = seal.decrypt(message, recipientKeyPair)` 
 
