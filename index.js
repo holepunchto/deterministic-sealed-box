@@ -11,7 +11,7 @@ module.exports = {
 }
 
 function encrypt (message, recipient, hashKey) {
-  const seed = deriveSeed(message)
+  const seed = deriveSeed(message, hashKey)
   const ephemeral = keyPair(seed)
 
   const sealed = b4a.alloc(sodium.crypto_box_SEALBYTES + message.byteLength)
