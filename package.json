@@ -1,0 +1,29 @@
+{
+  "name": "deterministic-sealed-box",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx standard && brittle test.js"
+  },
+  "keywords": [],
+  "author": "Holepunch Inc.",
+  "license": "Apache-2.0",
+  "description": "Deterministically create sealed boxes",
+  "devDependencies": {
+    "brittle": "^3.13.1",
+    "standard": "^17.1.2"
+  },
+  "dependencies": {
+    "b4a": "^1.6.7",
+    "hypercore-crypto": "^3.6.0",
+    "sodium-universal": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/holepunchto/deterministic-sealed-box.git"
+  },
+  "bugs": {
+    "url": "https://github.com/holepunchto/deterministic-sealed-box/issues"
+  },
+  "homepage": "https://github.com/holepunchto/deterministic-sealed-box#readme"
+}
