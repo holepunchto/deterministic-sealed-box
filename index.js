@@ -27,6 +27,10 @@ function encrypt (message, recipient, hashKey) {
 }
 
 function decrypt (payload, recipient, output) {
+  if (payload.byteLength < sodium.crypto_box_SEALBYTES) {
+    throw new Error('Failed to open sealed box')
+  }
+
   if (!output) output = b4a.alloc(payload.byteLength - sodium.crypto_box_SEALBYTES)
 
   if (!sodium.crypto_box_seal_open(output, payload, recipient.publicKey, recipient.secretKey)) {
