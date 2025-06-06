@@ -31,3 +31,10 @@ test('decrypt in place', t => {
 
   t.alike(decrypted, message)
 })
+
+test('throw with no hash key', t => {
+  const recipient = seal.keyPair()
+  const message = b4a.from('some data to encrypt')
+
+  t.exception(() => seal.encrypt(message, recipient.publicKey, null), /No hash key provided/)
+})

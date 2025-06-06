@@ -11,6 +11,10 @@ module.exports = {
 }
 
 function encrypt (message, recipient, hashKey) {
+  if (!hashKey) {
+    throw new Error('No hash key provided')
+  }
+
   const seed = deriveSeed(message, hashKey)
   const ephemeral = keyPair(seed)
 
